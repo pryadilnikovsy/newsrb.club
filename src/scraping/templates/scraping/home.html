@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for object in object_list %}
+    <div class="card my-3">
+      <h5 class="card-header"><a href="{{ object.href_db }}">{{ object.title_db }}</a></h5>
+      <div class="card-body">
+        <p class="card-text">{{ object.news_preview_db }}</p>
+        <p><small>{{ object.timestamp|date:"d-M-Y" }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
